@@ -30,5 +30,37 @@ namespace NavigateurWeb
         {
             MessageBox.Show("Voici l'aide !", "Aide", MessageBoxButton.OKCancel, MessageBoxImage.Question);
         }
+
+        private void Recherche_Click(object sender, RoutedEventArgs e)
+        {
+            string url = urlTxt.Text;
+            // TODO : Vérifier si c'est une URL ok ...
+            try
+            {
+                navigateur.Navigate(url);
+            }
+            catch
+            {
+                Console.WriteLine("Erreur");
+            }
+        }
+            
+
+        private void suivant_Click(object sender, RoutedEventArgs e)
+        {
+            if(navigateur.CanGoForward)
+            {
+                navigateur.GoForward();
+            }
+        }
+
+        private void precedent_Click(object sender, RoutedEventArgs e)
+        {
+            if(navigateur.CanGoBack)
+            {
+                navigateur.GoBack();
+            }
+
+        }
     }
 }

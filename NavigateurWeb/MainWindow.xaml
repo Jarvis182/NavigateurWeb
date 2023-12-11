@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NavigateurWeb"
         mc:Ignorable="d"
-        Title="Navigateur Web" Height="450" Width="800" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Navigateur Web" Height="1000" Width="1500" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"  />
@@ -36,6 +36,38 @@
                 <Button Content="_Exemple"/>
             </Menu>
         </DockPanel>
+
+        <!-- Barre de Recherche -->
+        <TextBox x:Name="urlTxt" Grid.Row="1" Text="http://" TextWrapping="Wrap" Margin="150,10" VerticalAlignment="Center" Height="25" />
+        <Button Content="Rechercher" Grid.Row="1" Margin="1368,10,20,10" Foreground="White" FontWeight="Bold" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF00FF90" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button Content="❮" x:Name="precedent" Click="precedent_Click" Grid.Row="1" Margin="10,10,1430,10" Foreground="White" FontWeight="Bold" FontSize="18" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF00FF90" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="❯" x:Name="suivant" Click="suivant_Click" Grid.Row="1" Margin="85,10,1355,10" Foreground="White" FontWeight="Bold" FontSize="18" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF00FF90" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+
+        <!-- Navigateur -->
+        <WebBrowser Grid.Row="2" Source="https://www.google.com/" x:Name="navigateur" />
 
     </Grid>
 </Window>
