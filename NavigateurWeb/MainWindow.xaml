@@ -10,17 +10,18 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="25"  />
             <RowDefinition Height="45"  />
-            <RowDefinition  />
+            <RowDefinition />
         </Grid.RowDefinitions>
 
         <DockPanel Grid.Row="0" VerticalAlignment="Top" Height="25">
-            <Menu Height="25" DockPanel.Dock="Top" Width="auto" HorizontalAlignment="Stretch" />
-            <MenuItem Header="_Fichier">
+            <Menu Height="25" DockPanel.Dock="Top" Width="auto" HorizontalAlignment="Stretch">
+                <MenuItem Header="_Fichier" >
                     <MenuItem Header="_Nouveau" />
                     <MenuItem Header="_Ouvrir" />
                     <MenuItem Header="_Quitter" />
                 </MenuItem>
+            </Menu>
         </DockPanel>
-        
+
     </Grid>
 </Window>
