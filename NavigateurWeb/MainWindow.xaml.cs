@@ -20,5 +20,15 @@ namespace NavigateurWeb
         {
             InitializeComponent();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Voici l'aide !", "Aide", MessageBoxButton.OKCancel, MessageBoxImage.Question);
+        }
     }
 }

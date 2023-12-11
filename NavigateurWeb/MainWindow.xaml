@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NavigateurWeb"
         mc:Ignorable="d"
-        Title="Navigateur Web" Height="450" Width="800">
+        Title="Navigateur Web" Height="450" Width="800" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"  />
@@ -18,8 +18,22 @@
                 <MenuItem Header="_Fichier" >
                     <MenuItem Header="_Nouveau" />
                     <MenuItem Header="_Ouvrir" />
-                    <MenuItem Header="_Quitter" />
+                    <MenuItem Header="_Quitter" Click="MenuItem_Click" />
                 </MenuItem>
+
+                <MenuItem Header="_Edition" >
+                    <MenuItem Header="_Copier" />
+                    <MenuItem Header="_Couper" />
+                    <MenuItem Header="_Coller" />
+                </MenuItem>
+
+                <MenuItem Header="_Aider" >
+                    <MenuItem Header="_Version" />
+                    <MenuItem Header="_Mise à jour" />
+                    <MenuItem Header="_Checker" />
+                </MenuItem>
+                <Button Content=" ? " Click="Button_Click"/>
+                <Button Content="_Exemple"/>
             </Menu>
         </DockPanel>
 
