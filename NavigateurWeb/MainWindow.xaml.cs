@@ -62,5 +62,19 @@ namespace NavigateurWeb
             }
 
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            // Charger une Page dans un Frame
+            frame.Content = new Options();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            // Changer de Fenetre
+            Test fenetre = new Test();
+            fenetre.Show(); // Afficher une Fenetre
+            this.Close();
+        }
     }
 }

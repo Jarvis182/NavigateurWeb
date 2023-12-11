@@ -33,7 +33,8 @@
                     <MenuItem Header="_Checker" />
                 </MenuItem>
                 <Button Content=" ? " Click="Button_Click"/>
-                <Button Content="_Exemple"/>
+                <Button Content="_Exemple" Click="Button_Click_1"/>
+                <Button Content="_Exemple2" Click="Button_Click_2"/>
             </Menu>
         </DockPanel>
 
@@ -64,10 +65,14 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        
+        <Frame Grid.Row="2" x:Name="frame" Margin="90,20,728,-20"/>
 
 
         <!-- Navigateur -->
-        <WebBrowser Grid.Row="2" Source="https://www.google.com/" x:Name="navigateur" />
+         <WebBrowser Grid.Row="2" Source="https://www.google.com/" x:Name="navigateur" Margin="688,0,0,0" /> 
+        
+        
 
     </Grid>
 </Window>
