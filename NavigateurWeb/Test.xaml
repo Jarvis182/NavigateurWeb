@@ -13,8 +13,8 @@
         </LinearGradientBrush>
     </Window.Background>
     <Grid>
-        <Label Margin="347,174,0,0">
-            <Button Content="Button" Height="85" Width="146" Click="Button_Click"/>
+        <Label Margin="317,167,317,167">
+            <Button Content="Button" Height="85" Width="146" Click="Button_Click" Background="#FFA5529B" Foreground="#FFF9F9F9"/>
         </Label>
     </Grid>
 </Window>
